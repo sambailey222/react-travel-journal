@@ -6,10 +6,14 @@
   background-color: #F55A5A;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 12px;
 }
+
 .nav--image {
   width: 24px;
 height: 24px;
+margin-right: 5px;
 }
 
 .nav--title {
@@ -26,4 +30,18 @@ height: 24px;
   letter-spacing: -0.075em;
 
   color: #FFFFFF;
+}
+
+.card--image {
+  width: 125px;
+height: 168px;
+}
+
+.location {
+font-style: normal;
+font-weight: 400;
+font-size: 10.24px;
+line-height: 12px;
+letter-spacing: 0.17em;
+text-transform: uppercase
 }
