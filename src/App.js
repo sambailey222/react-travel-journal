@@ -7,7 +7,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Card />
+      <section className="journal">
+        <Card />
+      </section>
+      
     </div>
   );
 }

@@ -32,16 +32,58 @@ margin-right: 5px;
   color: #FFFFFF;
 }
 
-.card--image {
-  width: 125px;
-height: 168px;
+.journal {
+  margin-top: 50px;
 }
 
-.location {
+.card {
+  display: flex;
+  width: 40%;
+  margin: auto;
+  align-items: center;
+}
+
+.column--right {
+  text-align: left;
+  margin-left: 1em;
+  height: 11em;
+}
+
+.card--image {
+  width: 8em;
+  height: 11em;
+  border-radius: 6px;
+}
+
+.card--location {
 font-style: normal;
 font-weight: 400;
 font-size: 10.24px;
 line-height: 12px;
 letter-spacing: 0.17em;
-text-transform: uppercase
+text-transform: uppercase;
+margin-left: 5px;
+}
+
+.card--map {
+  font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 12px;
+color: #918E9B;
+margin-left: 10px;
+}
+
+.card--dates {
+  font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 12px;
+}
+
+.card--desc {
+  font-weight: 400;
+font-size: 10.24px;
+line-height: 150%;
+color: #2B283A;
 }
