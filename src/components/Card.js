@@ -1,23 +1,30 @@
 import Data from '../data.js'
 import Pin from '../pin.png'
 
-export default function Card() {
+export default function Card(props) {
     
-    console.log(Data);
-    console.log(Data[0].imageUrl);
+    console.log(props);
+    let displayValue = 'block';
+    if (props.id === 0) {
+        displayValue = 'none';
+    } 
+
     return (
-    <div className="card">
-        <div className="column--left">
-            <img src={Data[0].imageUrl} className="card--image"></img>
+    <div className="cardContainer">
+        <hr className="spacer" style={{display: displayValue}}></hr>
+        <div className="card">
+            <div className="column--left">
+                <img src={props.item.imageUrl} className="card--image"></img>
+            </div>
+            <div className="column--right">
+                <img src={Pin} />
+                <span className='card--location'>{props.item.location}</span>
+                <a className="card--map" href={props.item.googleMapsUrl} target="_blank">View on Google Maps</a>
+                <h1>{props.item.title}</h1>
+                <p className="card--dates">{props.item.startDate} - {props.item.endDate}</p>
+                <p className="card--desc">{props.item.description}</p>
+            </div>
         </div>
-        <div className="column--right">
-            <img src={Pin} />
-            <span className='card--location'>{Data[0].location}</span>
-            <a className="card--map" href={Data[0].googleMapsUrl} target="_blank">View on Google Maps</a>
-            <h1>Journal Entry</h1>
-            <p className="card--dates">{Data[0].startDate} - {Data[0].endDate}</p>
-            <p className="card--desc">{Data[0].description}</p>
-         </div>
     </div>
     );
 }
